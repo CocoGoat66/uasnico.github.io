@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Oswald:wght@200;300;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color: #c4ced4;
+    --text-primary: #005eff;
+    --bg-light: #E8E8E8;
+}
+.theme-text {
+    color:var(--main-color)
+}
+.navbar {
+    background-color: transparent;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    z-index: 5;
+}
+.navbar a {
+    color: black;
+}
+.navbar ul li a:hover {
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);    
+}
+header {
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/assets/bg\ utama.jpg);
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.wave {
+    position: absolute;
+    bottom: -80px;
+}
+.container .pic {
+    font-size: 25px;
+    font-weight: 500;
+    color: black;
+    font-family: 'Aboreto', cursive;
+}
+.middle {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.middle h1 {
+    font-size: 50px;
+    font-family: 'Lora', serif;
+}
+.mid-desc{
+    font-size: 14.5px;
+    display: flex;
+    margin-top: 15px;
+    opacity: 90%;
+    text-align: justify;
+}
+.button-awal {
+    opacity: 90%;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    border: transparent;
+    border-radius: 20px;
+    color: #18181a;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 15px;
+    padding: 10px 30px;
+    text-decoration: none;
+    cursor: pointer;
+    background: #fff;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-awal span:first-child {
+    position: relative;
+    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 10;
+}
+
+.button-awal span:last-child {
+    color: white;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 100;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateY(225%) translateX(-50%);
+    height: 14px;
+    line-height: 13px;
+}
+
+.button-awal:after {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transform-origin: bottom center;
+    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    transform: skewY(9.3deg) scaleY(0);
+    z-index: 50;
+}
+
+.button-awal:hover:after {
+    transform-origin: bottom center;
+    transform: skewY(9.3deg) scaleY(2);
+    color: white;
+}
+
+.button-awal:hover span:last-child {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 1;
+    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+.button-awal a {
+    color: black;
+    text-decoration: none;
+}
+.button-awal .a1 {
+    color: white;
+    text-decoration : none;
+}
+.collect {
+    margin-top: -40px;
+    z-index: 2;
+}
+.product {
+    margin: 100px auto;
+}
+.product p {
+    text-align: justify;
+}
+.product img {
+    height: 20px;
+    width: 20px;
+}
+.product .pict-1 img {
+    width: 100%;
+    height: 100%; 
+}
+.product .pict-2 img {
+    width: 100%;
+    height: 100%; 
+}
+.product .pict-3 img {
+    width: 100%;
+    height: 100%; 
+    
+}
+.prod-2 {
+    direction: rtl;
+}
+.bagian {
+    padding: 40px;
+    border: none;
+    background-color: #E8E8E8;
+    box-shadow: 0 -4px 4px 0 #E8E8E8;
+}
+.bagian h2{
+    text-align: center;
+    padding-bottom: 40px;
+}
+.bagian img {
+    width: 100%;
+    height: 100%; 
+    box-shadow: 2px 5px 8px 0 black;
+}
+.bagian a  {
+    padding: 5px 15px;
+    border-radius: 20px;
+    border-color: var(--text-primary);
+    background-color: var(--text-primary);
+    color: white;
+    border-style: none;
+}
+.bagian button:hover {
+    box-shadow: 0 0 2px #18181a;
+}
+.contact {
+    margin: 20px auto 100px;
+}
+.contact h2 {
+    text-align: center;
+    padding: 40px;
+}
+footer {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer h5 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+footer a {
+    color: #555;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #000;
+    border-bottom: 2px solid black;
+}
+footer .text-center {
+    color: #555;
+    font-size: 0.8rem;
+    margin-top: 2rem;
+}
